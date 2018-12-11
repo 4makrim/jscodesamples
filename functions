@@ -1,0 +1,27 @@
+function draw_square() {
+  for (var count = 0; count < 4; count++) {
+      moveForward(20);
+    turnRight(90);
+  }
+}
+
+function draw_grid() {
+  for (var count2 = 0; count2 < 15; count2++) {
+      draw_line_of_squares();
+    jumpForward(20);
+    turnLeft(90);
+    jumpForward(300);
+    turnRight(90);
+  }
+}
+
+function draw_line_of_squares() {
+  for (var count3 = 0; count3 < 15; count3++) {
+      draw_square();
+    turnRight(90);
+    jumpForward(20);
+    turnLeft(90);
+  }
+}
+
+draw_grid();
