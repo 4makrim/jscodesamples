@@ -1,0 +1,44 @@
+//Drawing 3 triangles down and then reversing direction to draw them going up. 
+
+var length2 = 50;
+
+for (var count2 = 0; count2 < 3; count2++) {
+  for (var count = 0; count < 3; count++) {
+      moveForward(length2);
+    turnLeft(120);
+  }
+  jumpForward(length2);
+  turnRight(90);
+  jumpForward(length2);
+  turnLeft(90);
+}
+for (var count4 = 0; count4 < 3; count4++) {
+  for (var count3 = 0; count3 < 3; count3++) {
+      moveForward(length2);
+    turnLeft(120);
+  }
+  jumpForward(length2);
+  turnLeft(90);
+  jumpForward(length2);
+  turnRight(90);
+}
+
+
+//What will the value of times be printed to the console.log() function?
+var times = 1;
+moveandincrement();
+times = times +1;
+moveandincrement();
+moveandincrement();
+times = 0;
+moveandincrement();
+moveandincrement();
+console.log("Value of times before the for loop: " + times)
+for(var i = 1; i < times; i++){
+  turnLeft(90);
+  moveForward(100);
+}
+function moveandincrement(){
+  moveForward(times);
+  times = times +1;
+}
